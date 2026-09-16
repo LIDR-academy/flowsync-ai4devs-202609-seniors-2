@@ -22,14 +22,84 @@ Borra el ejemplo de abajo cuando escribas el primero.
 
 ## Prompt 1
 
-**Modelo:** Opus 1M xHigh
+**Modelo:** claude-sonnet-5 1m High
 **Herramienta:** Claude Code
 
 ```
-Este es el ejemplo. Bórralo.
-
-El prompt va aquí dentro, entero y con sus saltos de línea,
-para que se sepa dónde empieza y dónde acaba.
+/init
 ```
 
-**Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+## Prompt 2
+
+**Modelo:** claude-sonnet-5 1m High
+**Herramienta:** Claude Code
+
+```
+create AGENT.md so it's generic use symlink
+```
+
+## Prompt 3
+
+**Modelo:** claude-sonnet-5 1m High
+**Herramienta:** Claude Code
+
+```
+no rename CLAUDE to AGENTS  (removing reference to claude in the renamed file) and create the symlink agents.md
+```
+
+## Prompt 4
+
+**Modelo:** claude-sonnet-5 1m High
+**Herramienta:** Claude Code
+
+```
+añade un mcp para jira atlassian
+```
+
+## Prompt 5
+
+**Modelo:** claude-sonnet-5 1m High
+**Herramienta:** Claude Code
+
+```
+/priority-ticket
+```
+
+**Qué salió:** trajo el ticket FLOW-6 en vivo desde Jira (MCP Atlassian), y como la descripción no traía
+criterios de aceptación y el frontend era greenfield, paró a preguntar routing/cliente API/alcance con
+`AskUserQuestion` antes de tocar código. Implementó login, registro y sesión persistida; typecheck, lint
+y build en verde, y las formas de request/error verificadas por `curl` contra el backend real. No pudo
+probarlo en un navegador real por no haber herramienta de automatización de navegador en la sesión.
+
+## Prompt 6
+
+**Modelo:** claude-sonnet-5 1m High
+**Herramienta:** Claude Code
+
+```
+puedes crear el plan.md de lo que has hecho
+```
+
+**Qué salió:** generó `plan.md` documentando (a posteriori) lo implementado en el Prompt 5: contexto,
+decisiones de alcance, archivos tocados y verificación realizada.
+
+## Prompt 7
+
+**Modelo:** claude-sonnet-5 1m High
+**Herramienta:** Claude Code
+
+```
+puedes comparar el @plan.md con @../flowsync-sin-harness/plan.md y ponerlo en docs/harness/comparacion.md
+```
+
+**Qué salió:** generó `docs/harness/comparacion.md` comparando el plan retrospectivo de esta copia (con
+harness) contra el plan prospectivo de la copia sin harness para el mismo ticket.
+
+## Prompt 8
+
+**Modelo:** claude-sonnet-5 1m High
+**Herramienta:** Claude Code
+
+```
+puedes añadir todos los prompts de la session al archivo de prompts
+```
