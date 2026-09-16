@@ -20,16 +20,74 @@ Borra el ejemplo de abajo cuando escribas el primero.
 
 ---
 
-## Prompt 1
+## Con harness
 
-**Modelo:** Opus 1M xHigh
+### Prompt 1 
+
+**Modelo:** Sonnet 5
 **Herramienta:** Claude Code
 
 ```
-Este es el ejemplo. Bórralo.
+I've connected an MCP server so you can access my Kanban board. There's a single work item waiting there, fetch it and get to work.
 
-El prompt va aquí dentro, entero y con sus saltos de línea,
-para que se sepa dónde empieza y dónde acaba.
 ```
 
-**Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+**Qué salió:** funcionó a la primera. Me preguntó sobre el ejercicio, le dije que lo ignorara. Pidió instalar libraries para poder hacer una prueba real, le dije que no.
+
+### Prompt 2
+
+**Modelo:** Sonnet 5
+**Herramienta:** Claude Code
+
+```
+/critic
+```
+
+**Qué salió:** Reportó 4 hallazgos menores. No tuve tiempo de hacer nada más.
+
+## Sin harness
+
+### Prompt 1
+
+**Modelo:** Sonnet 5
+**Herramienta:** Claude Code
+
+```
+I need your help to develop the frontend login for the application in this repo. This is the task you are given:
+Implementar login en el frontend
+
+Description
+
+Story:
+Como usuario de FlowSync, necesito ingresar a la aplicación con mi email y contraseña para poder acceder a mis tareas.
+
+Criterio de aceptación:
+
+Debe haber una página de login con campos para ingresar las credenciales. El campo para la contraseña debe ocultar el texto ingresado.
+
+Luego de autenticar al usuario se deberá mostrar una página estática de bienvenida
+
+Si falla la autenticación se deberá mostrar un error de usuario o contraseña inválidos, quedando en la página de login y blanqueando los campos del formulario.
+```
+
+**Qué salió:** armó la página de login pero no hacía nada
+
+### Prompt 2
+**Modelo:** Sonnet 5
+**Herramienta:** Claude Code
+
+```
+I've tested the login form using an ad-hoc account and nothing happens after entering the credentials. There's no error message but I'm not taken to the welcome screen either.
+```
+
+**Qué salió:** me pidió ayuda para ver qué pasaba con DevTools
+
+### Prompt 3
+**Modelo:** Sonnet 5
+**Herramienta:** Claude Code
+
+```
+ status is 200, and a token does show up
+```
+
+**Qué salió:** (me preguntaba por lo que se veía en DevTools) corrigió el problema y salió andando
