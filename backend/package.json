@@ -75,5 +75,9 @@
       "./app/middleware/*.ts"
     ]
   },
-  "prettier": "@adonisjs/prettier-config"
+  "prettier": "@adonisjs/prettier-config",
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true,
+    "@swc/core@1.15.43": true
+  }
 }
