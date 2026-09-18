@@ -2,35 +2,40 @@
 
 ---
 
-## Prompt 1 — con harness
+## Prompt 1 — con harness (ticket vago)
 
 **Modelo:** Sonnet 5 · Claude Pro (Claude Code v2.1.277)  
-**Herramienta:** Claude Code — skill `/priority-ticket`  
-**Repo:** `flowsync-ai4devs-202609-seniors-2` (`/clear` antes)
+**Herramienta:** Claude Code — `/priority-ticket`  
+**Repo:** `flowsync-ai4devs-202609-seniors-2` (`/clear`)
 
 ```
 /priority-ticket docs/harness/ticket.md
 ```
 
-**Qué salió:** plan solo. **4 archivos:** `lib/auth.ts`, `LoginForm.tsx`, `App.tsx`, `App.css` (opcional). Sin proxy Vite (leyó CORS). Criterios 1:1. Riesgos serialize/status. Citó CLAUDE.md (localStorage) y hook Prettier. Ofreció `adversarial-reviewer` / implementar solo si se pide.
+**Ticket (`docs/harness/ticket.md`):**
+```
+Título: Login
+
+La gente no puede entrar a la app desde la web. Arreglá eso.
+```
+
+**Qué salió:** plan solo. ~4–5 archivos (`lib/api.ts`, `lib/auth.ts`, `LoginForm.tsx`, `App.tsx`, CSS opcional). Sin signup (CLAUDE.md). Sin proxy/Context. **Admitió ticket sin AC**, propuso criterios 1–8 y **preguntó antes de implementar**. Citó localStorage y Prettier del harness.
 
 ---
 
-## Prompt 2 — sin harness
+## Prompt 2 — sin harness (mismo ticket vago)
 
 **Modelo:** Sonnet 5 · Claude Pro (Claude Code v2.1.277)  
 **Herramienta:** Claude Code (sin skill)  
-**Repo:** `flowsync-sin-harness-2` (`/clear` antes)
+**Repo:** `flowsync-sin-harness-2` (`/clear`)
 
 ```
 Solo plan, no implementes ni edites archivos.
 Incluí: archivos que tocarías (contados), API que usarías, y cómo cubrís el ticket.
 
-Título: Implementar login en el frontend
+Título: Login
 
-Como usuaria quiero iniciar sesión con email y contraseña y ver que quedé autenticada.
-También poder cerrar sesión.
-Si fallo, un mensaje claro. Sin registro en este ticket.
+La gente no puede entrar a la app desde la web. Arreglá eso.
 ```
 
-**Qué salió:** plan solo. **7 archivos:** `api/auth.ts`, `auth/useAuth.ts`, `LoginForm.tsx`, `SessionView.tsx`, `App.tsx`, `App.css`, `vite.config.ts` (proxy). Sin CLAUDE.md → infirió oxlint. Mismos endpoints. Más capas / proxy no pedido.
+**Qué salió:** plan solo. **6 archivos** incl. proxy Vite, `AuthContext`, `pages/LoginPage`. Asumió más arquitectura. Tocó CORS prod como riesgo. No preguntó criterios: los inventó e implementaría.
