@@ -1,35 +1,41 @@
 # Prompts
 
-Aquí van **todos los prompts que lanzaste** para hacer el ejercicio, en el orden en que los
-lanzaste, con el modelo y la herramienta de cada uno.
+---
 
-Esto no es papeleo. Lo que se revisa es **cómo pediste las cosas**, no solo lo que salió: un
-resultado flojo con un prompt bueno y un resultado flojo con un prompt vago necesitan feedback
-distinto, y sin este archivo no se distinguen.
+## Prompt 1 — con harness (ticket vago)
 
-## Cómo rellenarlo
+**Modelo:** Sonnet 5 · Claude Pro (Claude Code v2.1.277)  
+**Herramienta:** Claude Code — `/priority-ticket`  
+**Repo:** `flowsync-ai4devs-202609-seniors-2` (`/clear`)
 
-- Un apartado `## Prompt N` por cada prompt.
-- **Pega el prompt tal cual lo lanzaste**, dentro del bloque de código, aunque ocupe diez líneas
-  y aunque tenga faltas. No lo reescribas para que quede bien: el que arreglaste mentalmente
-  después no es el que lanzaste.
-- Incluye también los que **no funcionaron**. Suelen ser los más útiles de leer.
-- `Modelo` y `Herramienta` en todos. Si cambiaste de una a otra a mitad, se nota aquí.
+```
+/priority-ticket docs/harness/ticket.md
+```
 
-Borra el ejemplo de abajo cuando escribas el primero.
+**Ticket (`docs/harness/ticket.md`):**
+```
+Título: Login
+
+La gente no puede entrar a la app desde la web. Arreglá eso.
+```
+
+**Qué salió:** plan solo. ~4–5 archivos (`lib/api.ts`, `lib/auth.ts`, `LoginForm.tsx`, `App.tsx`, CSS opcional). Sin signup (CLAUDE.md). Sin proxy/Context. **Admitió ticket sin AC**, propuso criterios 1–8 y **preguntó antes de implementar**. Citó localStorage y Prettier del harness.
 
 ---
 
-## Prompt 1
+## Prompt 2 — sin harness (mismo ticket vago)
 
-**Modelo:** Opus 1M xHigh
-**Herramienta:** Claude Code
+**Modelo:** Sonnet 5 · Claude Pro (Claude Code v2.1.277)  
+**Herramienta:** Claude Code (sin skill)  
+**Repo:** `flowsync-sin-harness-2` (`/clear`)
 
 ```
-Este es el ejemplo. Bórralo.
+Solo plan, no implementes ni edites archivos.
+Incluí: archivos que tocarías (contados), API que usarías, y cómo cubrís el ticket.
 
-El prompt va aquí dentro, entero y con sus saltos de línea,
-para que se sepa dónde empieza y dónde acaba.
+Título: Login
+
+La gente no puede entrar a la app desde la web. Arreglá eso.
 ```
 
-**Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+**Qué salió:** plan solo. **6 archivos** incl. proxy Vite, `AuthContext`, `pages/LoginPage`. Asumió más arquitectura. Tocó CORS prod como riesgo. No preguntó criterios: los inventó e implementaría.
