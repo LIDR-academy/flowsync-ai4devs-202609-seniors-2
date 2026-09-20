@@ -186,6 +186,8 @@ Y los botones de acción se presentan en colores de alto contraste, diferenciand
 
 ## Prompt 5
 
+
+
 **Modelo:** Cursor Grok 4.6 
 
 **Herramienta:** Cursor
