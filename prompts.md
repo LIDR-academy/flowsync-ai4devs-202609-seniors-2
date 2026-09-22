@@ -145,36 +145,3 @@ añade los tramos 1 y 2 por favor
 ```
 
 **Qué salió:**  documento actualizado acorde a como lo solicita la tarea :)
-
-## Prompt 6
-
-**Modelo:** Opus 5.5 Extra
-**Herramienta:** Claude Code
-
-```
-
-```
-
-**Qué salió:** 
-
-## Prompt 7
-
-**Modelo:** Opus 5.5 Extra
-**Herramienta:** Claude Code
-
-```
-
-```
-
-**Qué salió:** 
-
-## Prompt 8
-
-**Modelo:** Opus 5.5 Extra
-**Herramienta:** Claude Code
-
-```
-
-```
-
-**Qué salió:** 
