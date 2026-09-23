@@ -40,19 +40,19 @@ Hay tres momentos, y saberlos cambia cómo aprovechas cada uno.
 - [ ] **Trabaja sobre tu propio fork.** Si has intentado subir tus cambios y GitHub te los ha rechazado, no es un fallo tuyo: **no tienes permiso de escritura sobre el repo del curso, y no deberías tenerlo.** La solución son dos minutos.
 
 ```bash
-# 1. Fork desde la web: botón "Fork" en github.com/LIDR-academy/flowsync-ai4devs
+# 1. Fork desde la web: botón "Fork" en github.com/LIDR-academy/flowsync-ai4devs-202609-seniors-2
 
 # 2a. Si AÚN NO has clonado: clona tu fork
-git clone git@github.com:<tu-usuario>/flowsync-ai4devs.git
-cd flowsync-ai4devs
-git remote add upstream git@github.com:LIDR-academy/flowsync-ai4devs.git
+git clone git@github.com:<tu-usuario>/flowsync-ai4devs-202609-seniors-2.git
+cd flowsync-ai4devs-202609-seniors-2
+git remote add upstream git@github.com:LIDR-academy/flowsync-ai4devs-202609-seniors-2.git
 
 # 2b. Si YA clonaste el del curso: no vuelvas a clonar, solo recoloca los remotos
 git remote rename origin upstream
-git remote add origin git@github.com:<tu-usuario>/flowsync-ai4devs.git
+git remote add origin git@github.com:<tu-usuario>/flowsync-ai4devs-202609-seniors-2.git
 
 # 2c. Si YA clonaste tu propio fork: solo te falta el upstream
-git remote add upstream git@github.com:LIDR-academy/flowsync-ai4devs.git
+git remote add upstream git@github.com:LIDR-academy/flowsync-ai4devs-202609-seniors-2.git
 
 # Comprueba cómo han quedado: origin = tu fork, upstream = el del curso
 git remote -v
@@ -65,7 +65,7 @@ git checkout -b s3/start upstream/s3/start
 git push -u origin s3/start
 ```
 
-> 📌 **Si te sale `Permission denied (publickey)`, es SSH, no el fork.** Los comandos de arriba usan URLs SSH (`git@github.com:…`), que necesitan una clave subida a tu cuenta de GitHub. Si no la tienes, o [súbela ahora](https://docs.github.com/es/authentication/connecting-to-github-with-ssh) (cinco minutos, y te sirve para el resto del curso), o cambia las tres URLs por su versión HTTPS (`https://github.com/<usuario>/flowsync-ai4devs.git`). Cualquiera de las dos vale; lo que no vale es descubrirlo el día del directo.
+> 📌 **Si te sale `Permission denied (publickey)`, es SSH, no el fork.** Los comandos de arriba usan URLs SSH (`git@github.com:…`), que necesitan una clave subida a tu cuenta de GitHub. Si no la tienes, o [súbela ahora](https://docs.github.com/es/authentication/connecting-to-github-with-ssh) (cinco minutos, y te sirve para el resto del curso), o cambia las tres URLs por su versión HTTPS (`https://github.com/<usuario>/flowsync-ai4devs-202609-seniors-2.git`). Cualquiera de las dos vale; lo que no vale es descubrirlo el día del directo.
 
 > 📌 **Un fork es una foto del momento, y el curso sigue publicando ramas.** Las ramas que aún no se han publicado **todavía no existen** en tu fork, y tu fork no se entera solo. Antes de arrancar el trabajo de cada módulo, corre **`git fetch upstream`** y saca la rama nueva desde ahí (`git checkout -b sN/start upstream/sN/start`). Si haces checkout de una rama y te contesta *"pathspec did not match"*, casi siempre es esto y se arregla con un `fetch`.
 
@@ -100,7 +100,7 @@ npm install -g @fission-ai/openspec@latest
 openspec --version          # debe responder con un número de versión
 
 # 2. Sandbox desechable, FUERA de cualquier proyecto
-cd ~                        # imprescindible: vienes de dentro de flowsync-ai4devs
+cd ~                        # imprescindible: vienes de dentro de flowsync-ai4devs-202609-seniors-2
 mkdir openspec-sandbox && cd openspec-sandbox
 openspec init               # elige "Claude Code" en el asistente; acepta el resto
 
@@ -108,7 +108,7 @@ openspec init               # elige "Claude Code" en el asistente; acepta el res
 ls -R openspec/             # dos carpetas (specs/ y changes/) y un config.yaml
 ```
 
-> ⚠️ **El `cd ~` no es decorativo.** Vienes del paso 1, y ahí te quedaste **dentro** de `flowsync-ai4devs`. Sin salir antes, el `openspec init` inicializaría el repo del proyecto: escribiría `openspec/` y `.claude/commands/opsx/` dentro de él, que es justo lo que este paso te dice que no hagas todavía. Si ya te ha pasado, borra esas dos carpetas del repo y vuelve a empezar en `~`.
+> ⚠️ **El `cd ~` no es decorativo.** Vienes del paso 1, y ahí te quedaste **dentro** de `flowsync-ai4devs-202609-seniors-2`. Sin salir antes, el `openspec init` inicializaría el repo del proyecto: escribiría `openspec/` y `.claude/commands/opsx/` dentro de él, que es justo lo que este paso te dice que no hagas todavía. Si ya te ha pasado, borra esas dos carpetas del repo y vuelve a empezar en `~`.
 
 - [ ] **Abre Claude Code *dentro* de `openspec-sandbox/`**, escribe `/` y **confirma que aparecen** `/opsx:propose`, `/opsx:apply`, `/opsx:archive`. Que sea dentro del sandbox importa: `openspec init` instala los comandos en el `.claude/` **de ese proyecto**, no en tu máquina. Si abres Claude Code en otra carpeta no verás ninguno, y no será un fallo de instalación. *(Si estás dentro y aun así no aparecen, reinicia Claude Code por completo: los slash commands se cargan al arrancar.)*
 - [ ] **Fíjate en las dos carpetas que crea y en que `specs/` nace vacía**: `specs/` es la verdad sobre cómo se comporta el sistema, `changes/` es lo que está en curso. Esa separación es la que sostiene el vocabulario `propose → apply → archive`. Junto a ellas verás un **`config.yaml`**: ahí es donde luego se le cuenta a OpenSpec el stack y las convenciones del proyecto. *(Si un tutorial te habla de un `openspec/project.md`, ya no existe: se retiró en la 1.0. No es un fallo de tu instalación.)*
