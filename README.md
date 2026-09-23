@@ -60,15 +60,15 @@ Cuenta con unos 5 minutos para leer el stack y 15-20 para el entorno.
 
 ### 3. Forkea y clona el proyecto
 
-- [ ] **Tu propio fork de `LIDR-academy/flowsync-ai4devs`, en la rama `s1/start`.** Trabajas sobre un **fork**, no sobre un clon directo del repo del curso: **no tienes permiso de escritura sobre el del curso, y no deberías tenerlo**, así que sobre un clon directo cualquier `git push` tuyo va a fallar. Son dos minutos:
+- [ ] **Tu propio fork de `LIDR-academy/flowsync-ai4devs-202609-seniors-2`, en la rama `s1/start`.** Trabajas sobre un **fork**, no sobre un clon directo del repo del curso: **no tienes permiso de escritura sobre el del curso, y no deberías tenerlo**, así que sobre un clon directo cualquier `git push` tuyo va a fallar. Son dos minutos:
 
   ```bash
-  # 1. Fork desde la web: botón "Fork" en github.com/LIDR-academy/flowsync-ai4devs
+  # 1. Fork desde la web: botón "Fork" en github.com/LIDR-academy/flowsync-ai4devs-202609-seniors-2
 
   # 2. Clona TU fork (no el del curso) y añade el del curso como "upstream"
-  git clone git@github.com:<tu-usuario>/flowsync-ai4devs.git
-  cd flowsync-ai4devs
-  git remote add upstream git@github.com:LIDR-academy/flowsync-ai4devs.git
+  git clone git@github.com:<tu-usuario>/flowsync-ai4devs-202609-seniors-2.git
+  cd flowsync-ai4devs-202609-seniors-2
+  git remote add upstream git@github.com:LIDR-academy/flowsync-ai4devs-202609-seniors-2.git
 
   # Comprueba cómo han quedado: origin = tu fork, upstream = el del curso
   git remote -v
@@ -81,9 +81,9 @@ Cuenta con unos 5 minutos para leer el stack y 15-20 para el entorno.
   git push -u origin s1/start
   ```
 
-  > 📌 **Si ya habías clonado el repo del curso, no vuelvas a clonar**: haz el fork en la web y recoloca los remotos sobre el clon que ya tienes, `git remote rename origin upstream` y `git remote add origin git@github.com:<tu-usuario>/flowsync-ai4devs.git`. A partir de ahí, los pasos 3 y 4 son iguales.
+  > 📌 **Si ya habías clonado el repo del curso, no vuelvas a clonar**: haz el fork en la web y recoloca los remotos sobre el clon que ya tienes, `git remote rename origin upstream` y `git remote add origin git@github.com:<tu-usuario>/flowsync-ai4devs-202609-seniors-2.git`. A partir de ahí, los pasos 3 y 4 son iguales.
 
-  > 📌 **Si te sale `Permission denied (publickey)`, es SSH, no el fork.** Los comandos de arriba usan URLs SSH (`git@github.com:…`), que necesitan una clave subida a tu cuenta de GitHub. Si no la tienes, o [súbela ahora](https://docs.github.com/es/authentication/connecting-to-github-with-ssh) (cinco minutos, y te sirve para el resto del curso), o cambia las dos URLs por su versión HTTPS (`https://github.com/<usuario>/flowsync-ai4devs.git`). Cualquiera de las dos vale; lo que no vale es descubrirlo el día del directo.
+  > 📌 **Si te sale `Permission denied (publickey)`, es SSH, no el fork.** Los comandos de arriba usan URLs SSH (`git@github.com:…`), que necesitan una clave subida a tu cuenta de GitHub. Si no la tienes, o [súbela ahora](https://docs.github.com/es/authentication/connecting-to-github-with-ssh) (cinco minutos, y te sirve para el resto del curso), o cambia las dos URLs por su versión HTTPS (`https://github.com/<usuario>/flowsync-ai4devs-202609-seniors-2.git`). Cualquiera de las dos vale; lo que no vale es descubrirlo el día del directo.
 
   > Si algo de esto falla, avisa a tu TA. No lo dejes para el minuto 1 del directo.
 
@@ -149,7 +149,7 @@ Dos carpetas con el mismo código. En una montas el harness. La otra **no se toc
 
 ```bash
 # desde el directorio que CONTIENE tu clon, no desde dentro
-cp -R flowsync-ai4devs flowsync-sin-harness
+cp -R flowsync-ai4devs-202609-seniors-2 flowsync-sin-harness
 ```
 
 Tu clon original es la copia **con** harness: es la que tiene los remotos configurados y desde la que vas a entregar. `flowsync-sin-harness/` es solo una copia de trabajo, no se entrega y no se toca.
@@ -249,7 +249,7 @@ git commit -m "harness: comparacion con y sin harness, mas prompts"
 git push -u origin harness-<tus-iniciales>
 ```
 
-Con la rama empujada, GitHub te ofrece arriba el botón para abrir el pull request. Va **contra el repositorio del curso** (`github.com/LIDR-academy/flowsync-ai4devs`), no contra tu fork.
+Con la rama empujada, GitHub te ofrece arriba el botón para abrir el pull request. Va **contra el repositorio del curso** (`github.com/LIDR-academy/flowsync-ai4devs-202609-seniors-2`), no contra tu fork.
 
 > 🧠 **`prompts.md` no es papeleo, y es la mitad de lo que se revisa.** Lo que se mira no es solo lo que te salió, es **cómo lo pediste**: un resultado flojo con un prompt bueno y un resultado flojo con un prompt vago necesitan respuestas distintas, y sin ese archivo no se distinguen. Pega los prompts **tal cual los lanzaste**, con su modelo y su herramienta, e incluye también **los que no funcionaron**, que suelen ser los más útiles de leer.
 
