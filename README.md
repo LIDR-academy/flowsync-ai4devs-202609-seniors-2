@@ -37,7 +37,7 @@ Cuenta con unos 5-10 minutos.
 
 ### 2. Forkea y clona el proyecto
 
-- [ ] **Tu fork de `LIDR-academy/flowsync-ai4devs`, en la rama `s2/start`.** Trae el harness ya configurado: `CLAUDE.md`/`AGENTS.md`, skill, subagente, hook y el MCP de Atlassian/Jira. Si ya tienes tu fork con el remoto `upstream` apuntando al repo del curso, basta con traer la rama nueva:
+- [ ] **Tu fork de `LIDR-academy/flowsync-ai4devs-202609-seniors-2`, en la rama `s2/start`.** Trae el harness ya configurado: `CLAUDE.md`/`AGENTS.md`, skill, subagente, hook y el MCP de Atlassian/Jira. Si ya tienes tu fork con el remoto `upstream` apuntando al repo del curso, basta con traer la rama nueva:
 
   ```bash
   git fetch upstream
@@ -47,12 +47,12 @@ Cuenta con unos 5-10 minutos.
   Si empiezas de cero, trabaja sobre un **fork**, no sobre un clon directo del repo del curso: sobre el del curso **no tienes permiso de escritura**, así que cualquier `git push` tuyo fallaría.
 
   ```bash
-  # 1. Fork desde la web: botón "Fork" en github.com/LIDR-academy/flowsync-ai4devs
+  # 1. Fork desde la web: botón "Fork" en github.com/LIDR-academy/flowsync-ai4devs-202609-seniors-2
 
   # 2. Clona TU fork y añade el del curso como "upstream"
-  git clone git@github.com:<tu-usuario>/flowsync-ai4devs.git
-  cd flowsync-ai4devs
-  git remote add upstream git@github.com:LIDR-academy/flowsync-ai4devs.git
+  git clone git@github.com:<tu-usuario>/flowsync-ai4devs-202609-seniors-2.git
+  cd flowsync-ai4devs-202609-seniors-2
+  git remote add upstream git@github.com:LIDR-academy/flowsync-ai4devs-202609-seniors-2.git
   git remote -v          # origin = tu fork, upstream = el del curso
 
   # 3. Trae las ramas del curso y colócate en la de hoy
@@ -63,7 +63,7 @@ Cuenta con unos 5-10 minutos.
   git push -u origin s2/start
   ```
 
-  > 📌 **Si ya habías clonado el repo del curso**, no vuelvas a clonar: haz el fork en la web y recoloca los remotos sobre el clon que ya tienes, `git remote rename origin upstream` y `git remote add origin git@github.com:<tu-usuario>/flowsync-ai4devs.git`. Desde ahí, los pasos 3 y 4 son iguales. Y si las URLs SSH (`git@github.com:…`) te dan `Permission denied (publickey)`, es que te falta la clave en tu cuenta de GitHub: [súbela](https://docs.github.com/es/authentication/connecting-to-github-with-ssh) o usa la versión HTTPS (`https://github.com/<usuario>/flowsync-ai4devs.git`).
+  > 📌 **Si ya habías clonado el repo del curso**, no vuelvas a clonar: haz el fork en la web y recoloca los remotos sobre el clon que ya tienes, `git remote rename origin upstream` y `git remote add origin git@github.com:<tu-usuario>/flowsync-ai4devs-202609-seniors-2.git`. Desde ahí, los pasos 3 y 4 son iguales. Y si las URLs SSH (`git@github.com:…`) te dan `Permission denied (publickey)`, es que te falta la clave en tu cuenta de GitHub: [súbela](https://docs.github.com/es/authentication/connecting-to-github-with-ssh) o usa la versión HTTPS (`https://github.com/<usuario>/flowsync-ai4devs-202609-seniors-2.git`).
 
   > Si el `checkout` o el `clone` fallan, avisa a tu TA. No lo dejes para el minuto 1 del directo.
 
