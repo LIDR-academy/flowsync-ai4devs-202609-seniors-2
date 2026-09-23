@@ -22,14 +22,37 @@ Borra el ejemplo de abajo cuando escribas el primero.
 
 ## Prompt 1
 
-**Modelo:** Opus 1M xHigh
+**Modelo:** Opus 1M Medium effort
 **Herramienta:** Claude Code
 
 ```
-Este es el ejemplo. Bórralo.
+explícame que capabilities tiene ya construidas y el modelo de datos actual, resumelo en 5 líneas
 
-El prompt va aquí dentro, entero y con sus saltos de línea,
-para que se sepa dónde empieza y dónde acaba.
 ```
 
-**Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+**Qué salió:** funcionó a la primera.
+
+## Prompt 2
+
+**Modelo:** Opus 1M Medium effort
+**Herramienta:** Claude Code
+
+```
+propón las cinco preguntas que más reducirían la incertidumbre sobre el problema, los usuarios y el alcance. pregunta antes de proponer y no bajes al nivel de modelo de datos ni endpoints
+
+```
+
+**Qué salió:** funcionó a la primera.
+
+## Prompt 3
+
+**Modelo:** Opus 1M Medium effort
+**Herramienta:** Claude Code
+
+```
+propón un mvp con las funcionalidades completas a implementar para cada funcionalidad define el alcance con estos bloques
+  problema, usuarios, propuesta de valor, alcance, no-alcance, se agresiva recortando y justifica las funcionalidades excluidas
+
+```
+
+**Qué salió:** funcionó a la primera.
