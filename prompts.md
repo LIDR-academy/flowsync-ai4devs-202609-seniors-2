@@ -218,3 +218,16 @@ Si aplica los ajustes al punto 2 de la parte B
 ```
 
 **Qué salió:** recortó el punto 2 de la Parte B, que repetía palabra por palabra las justificaciones ya escritas en el NO-alcance (#12-14), a una sola línea que remite ahí en vez de duplicarlas.
+
+---
+
+## Prompt 15
+
+**Modelo:** Sonnet 5
+**Herramienta:** Claude Code
+
+```
+Si hagamos todo y la descripcion del PR
+```
+
+**Qué salió:** aplicó los 3 ajustes que salieron de la revisión adversarial del PR #39: reetiquetó las 3 exclusiones mal atribuidas a la ficha, reagrupó el ítem #15 fuera de "recortadas por el autor", ajustó la frase de Propuesta de valor que contradecía el punto 7, y corrigió la mención de "WebSockets/polling" en el documento y en la descripción del PR.
