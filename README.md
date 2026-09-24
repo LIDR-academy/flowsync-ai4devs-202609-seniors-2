@@ -147,7 +147,13 @@ Suena a tarea de documentación, y ahí está la trampa: no lo es. Intentar deci
 
 > ⚠️ **Resérvale un rato de verdad y ponte el reloj.** Son unos 45 minutos y hay que pararlos. Dejarlo para la noche de antes te deja con una spec larga y sin comprobar, que es justo lo que la tarea quiere que veas, pero se aprovecha mejor con tiempo de pensarlo.
 
----
+### El encuadre, y no es un consuelo
+
+**El entregable no es el alcance. Es el NO-alcance**, y la parte B de abajo es lo que hay que traer sí o sí.
+
+Un alcance largo lo escribe cualquiera, y la IA lo escribe larguísimo. Lo que cuesta es la frontera: decir *"esto no"* de algo que suena razonable, y poder sostener por qué. Esa decisión no la delega nadie, y es la única del ejercicio que sigue valiendo cuando cambie la herramienta.
+
+**El reloj tampoco es una crueldad de diseño.** En la vida real el alcance de un MVP tampoco se decide con tiempo infinito: se decide con la reunión encima. Lo que sale en 45 minutos es exactamente la parte que depende de tener criterio, y no la que depende de tener un modelo mejor.
 
 ### 🅰️ Parte A: la spec, con reloj
 
@@ -207,7 +213,7 @@ Debajo de la spec, en el mismo archivo. **Esta parte no se puede fallar**, y es 
 
 Todo lo que produzcas va en la rama que creaste en el último paso del entorno.
 
-**Un pull request desde tu fork**, con dos cosas dentro y ni una más:
+Todo lo que produzcas va en la rama `alcance-<tus-iniciales>` que creaste al dejar el entorno listo. Sube **un pull request desde tu fork**, con dos cosas dentro y ni una más:
 
 1. **Tu archivo de spec** en `docs/spec-viva/`, con los requisitos y las tres listas.
 2. **`prompts.md`**, en la raíz del proyecto. Ya está ahí con la plantilla puesta.
