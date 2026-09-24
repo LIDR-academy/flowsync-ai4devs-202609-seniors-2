@@ -1,35 +1,66 @@
 # Prompts
 
-Aquí van **todos los prompts que lanzaste** para hacer el ejercicio, en el orden en que los
-lanzaste, con el modelo y la herramienta de cada uno.
+---
 
-Esto no es papeleo. Lo que se revisa es **cómo pediste las cosas**, no solo lo que salió: un
-resultado flojo con un prompt bueno y un resultado flojo con un prompt vago necesitan feedback
-distinto, y sin este archivo no se distinguen.
+## Prompt 1 — El terreno que ya existe
 
-## Cómo rellenarlo
+**Modelo:** Sonnet 5 · Claude Pro
+**Herramienta:** Claude Code v2.1.280
 
-- Un apartado `## Prompt N` por cada prompt.
-- **Pega el prompt tal cual lo lanzaste**, dentro del bloque de código, aunque ocupe diez líneas
-  y aunque tenga faltas. No lo reescribas para que quede bien: el que arreglaste mentalmente
-  después no es el que lanzaste.
-- Incluye también los que **no funcionaron**. Suelen ser los más útiles de leer.
-- `Modelo` y `Herramienta` en todos. Si cambiaste de una a otra a mitad, se nota aquí.
+```
+Antes de especificar nada nuevo, necesito que me digas en 3 a 5 líneas:
+1. Qué capabilities tiene hoy FlowSync 
+2. Cómo es el modelo de datos actual
+Explorá el código del repo para resolver esto 
+```
 
-Borra el ejemplo de abajo cuando escribas el primero.
+**Qué salió:** Exploró rutas, controladores, validadores y frontend. Devolvió que solo existe auth (signup, login, logout, perfil) y el modelo tiene una tabla users + access_tokens. Sin dominio de tareas. Correcto y conciso.
 
 ---
 
-## Prompt 1
+## Prompt 2 — El interrogatorio (5 preguntas)
 
-**Modelo:** Opus 1M xHigh
-**Herramienta:** Claude Code
+**Modelo:** Sonnet 5 · Claude Pro
+**Herramienta:** Claude Code v2.1.280
 
 ```
-Este es el ejemplo. Bórralo.
-
-El prompt va aquí dentro, entero y con sus saltos de línea,
-para que se sepa dónde empieza y dónde acaba.
+Ahora te paso la visión de producto
+Quiero que FlowSync sea una herramienta para que los equipos remotos sepan en qué está trabajando cada uno sin tener que hacer reuniones de sincronización. Algo tipo tareas compartidas pero más en tiempo real y menos rollo que Jira.
+Dicho esto haceme las 5 preguntas que más reducirían la incertidumbre para recortar un MVP. 
+Una sola ronda, las 5 juntas. NO bajes a modelo de datos, endpoints ni arquitectura , pensemos solo en el producto .
 ```
 
-**Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+**Qué salió:** 5 preguntas de producto: unidad de estado (tarea vs mood), distribución (pull vs push), colaboración (autoreporte vs asignación), ritual (libre vs check-in), historial (presente vs pasado). Bien enfocadas, sin bajar a técnico.
+
+---
+
+## Prompt 2b — Respuesta con la ficha de hechos
+
+**Modelo:** Sonnet 5 · Claude Pro
+**Herramienta:** Claude Code v2.1.280
+
+```
+(Se pegó la ficha de hechos de la lección "Ejercicio FlowSync" del Módulo 2 como respuesta a las 5 preguntas)
+```
+
+**Qué salió:** Mapeó cada respuesta a las preguntas. Agregó supuestos razonables (set de estados, tareas completadas ocultas por defecto, fecha como señal visual sin flujo). Preguntó si avanzar.
+
+---
+
+## Prompt 3 — Alcance en cinco bloques
+
+**Modelo:** Sonnet 5 · Claude Pro
+**Herramienta:** Claude Code v2.1.280
+
+```
+sí, avanzá, armame el alcance del MVP en exactamente cinco bloques:
+Problema
+Usuarios
+Propuesta de valor
+Alcance (qué entra)
+NO-alcance (qué queda fuera y por qué cada exclusión)
+
+se agresivo recortando. Cada cosa que dejes fuera tiene que tener su justificación. Esto es un documento de producto: sin tablas de BD, sin endpoints, sin arquitectura
+```
+
+**Qué salió:** Documento de alcance en 5 bloques. Problema concreto (daily pierde tiempo, solapes). Usuarios: equipos remotos 3–10, roles planos. 7 items en alcance (espacio único, tareas con 4 atributos, estados, filtro, señal visual, tiempo real). 11 exclusiones justificadas. No bajó a técnico.
