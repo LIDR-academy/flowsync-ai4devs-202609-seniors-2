@@ -204,7 +204,7 @@ dejemos esta redaccion para la parte A y con lo fuera del scope q ya hablamos y 
 Espera lo q mencionas del webhook no es muy tecnico?
 ```
 
-**Qué salió:** confirmó que "WebSockets/polling" era detalle técnico fuera de lugar en un documento de producto y lo reescribió describiendo el comportamiento en vez del mecanismo. Segundo hallazgo de sobre-especificación técnica detectado por el autor.
+**Qué salió:** confirmó que la respuesta anterior había nombrado una tecnología concreta (no "webhook", que fue lo que preguntó el autor) al describir el punto 7, y lo reescribió describiendo el comportamiento en vez de nombrar cualquier mecanismo. Segundo hallazgo de sobre-especificación técnica detectado por el autor.
 
 ---
 
